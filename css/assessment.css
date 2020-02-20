@@ -1,0 +1,45 @@
+body {
+  background-image: url('../images/background.jpeg');
+  background-position: center;
+}
+
+img{
+   width: 125px;
+   margin-bottom: 10px;
+   display: block;
+   margin: 0 auto;
+}
+
+#mystuff {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+
+div{
+   padding: 25px;
+   margin:5px;
+   display: grid;
+   text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#mystuff:nth-child(even) {
+  /* right column */
+  grid-column: 2 / 2;
+}
+
+
+@media screen and (min-width:800px) {
+  #mystuff {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  div:nth-child(odd) {
+    border-style: solid;
+    border-width: 2px;
+  }
+}
